@@ -1,0 +1,25 @@
+{# ###########################################}
+{# marche pas ici je suis dans un include#}
+{#  {% set currentPath = path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) %}#}
+{# <p>#}
+{# {{ currentPath }}#}
+{# </p>#}
+
+{#  <p>#}
+{#  {{ path(app.request.attributes.get('_route'), app.request.attributes.get('_route_params')) }}#}
+{# </p>#}
+{# ###########################################}
+
+{% set currentRoute = app.request.attributes.get('_route') %}
+{%  if currentRoute matches '{dc_platform_dahouet_regates_.*}' %}
+{% include "DCPlatformBundle:Dahouet/navbar:regates.html.twig" %}
+{% elseif currentRoute matches '{dc_platform_dahouet_.*}' or currentRoute matches '{login}' %}
+{% include "DCPlatformBundle:Dahouet/navbar:standard.html.twig" %}
+{# <p>vous etes a l'inscription</p>#}
+{# {% elseif currentRoute == "dc_platform_dahouet_root" %}#}
+{# {% elseif currentRoute == "dc_platform_dahouet_regates_view" %}#}
+{# vue regates#}
+{% endif %}
+
+         
+         

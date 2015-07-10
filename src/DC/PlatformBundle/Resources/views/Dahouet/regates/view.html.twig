@@ -1,0 +1,50 @@
+{# src/OC/PlatformBundle/Resources/views/Dahouet/regates/index.html.twig
+#} {% extends "DCPlatformBundle::dahouet.Layout.html.twig" %}
+{% block title %}
+	{% if app.request.attributes.get('_route') matches '{dc_platform_dahouet_regates_inscription}' %}
+		inscription aux regatesS
+	{% else %}
+		Regate {{ regate.title }}
+	{% endif %}
+	 - {{ parent() }}
+{% endblock %}
+{% block main %}
+<div id="content-main" class="clearfix grid_11">
+	<div id="post-35"
+		class="post-34 page type-page status-publish hentry clearfix post nodate">
+		{% set currentRoute = app.request.attributes.get('_route') %}
+		{% if app.request.attributes.get('_route') matches '{dc_platform_dahouet_regates_inscription}' %}
+		{% include  "DCPlatformBundle:Dahouet/regates:inscription.html.twig" %}
+		{% else %}
+		<div class="entry clearfix">
+			<h1 class="post-title entry-title">{{ regate.title }}</h1>
+			<div class="post-meta clearfix">
+				<span class="updated"> <span class="value-title"
+					title="2013-03-01T11:53" />
+				</span>
+			</div>
+			<div class="entry-content clearfix">
+				<p>
+					<strong>{{ regate.date|date('d/m/Y') }}</strong>
+				</p>
+				<p>&nbsp;</p>
+				{{ regate.content|raw }}
+
+				<div class="important_block message-block">
+					<p class="printonly">
+						<strong>Important!</strong>
+					</p>
+					</p>
+					<p class="first-p">&nbsp;</p>
+					<p>Les informations seront publiées prochainement</p>
+					<p>
+				
+				</div>
+			</div>
+			<div class="entry-footer clearfix"></div>
+		</div>
+		{% endif %}
+	</div>
+</div>
+<!-- #content-main -->
+{% endblock %}

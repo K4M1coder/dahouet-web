@@ -1,0 +1,30 @@
+{# src/OC/PlatformBundle/Resources/views/Dahouet/regates/index.html.twig
+#} {% extends "DCPlatformBundle::dahouet.Layout.html.twig" %} {% block
+title %} Regates - {{ parent() }} {% endblock %} {% block main %}
+<div id="content-main" class="clearfix grid_11">
+
+
+
+	{% for listRegates in listRegates %}
+	<div id="post-{{ listRegates.id }}"
+		class="post-34 page type-page status-publish hentry clearfix post nodate">
+		<div class="entry clearfix">
+			<h1 class="post-title entry-title">{{ listRegates.title }}</h1>
+			<div class="post-meta clearfix">
+				<span class="updated"> <span class="value-title"
+					title="2013-03-01T11:53" /></span>
+			
+			</div>
+			<div class="entry-content clearfix">
+				<p>
+					<strong>{{ listRegates.date|date('Y-m-d') }}</strong>
+				</p>
+			</div>
+			<div class="entry-footer clearfix"></div>
+		</div>
+	</div>
+	{% endfor %}
+
+</div>
+<!-- #content-main -->
+{% endblock %}

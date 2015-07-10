@@ -1,0 +1,49 @@
+{% extends "::dahouetLayout.html.twig" %}
+
+{% block header %}
+	<div id="header">
+		<img src="{{ asset('bundles/dcplatform/images/imageTitre.jpg') }}" alt="" width="960" height="198" class="header-img" />        	       
+	</div>
+{% endblock %}
+
+{% block navbar %}
+{% include "DCPlatformBundle:Dahouet:navbar.html.twig" %}
+{# {{ render(controller('DCPlatformBundle:Dahouet:navbar')) }}#}
+{% endblock %}
+
+{% block content %}
+	<div id="content" class="clearfix hfeed">
+
+{% block main %}
+ici le block principal
+{% endblock %}
+
+
+
+{% block aside %}
+		<div id="sidebar1" class="sidebar grid_5">
+		<div id="text-2" class="sidebar-wrap clearfix widget_text"><p align="center" class="Style1" style="font-size:14px ">Connexion</p>
+		</div>
+			
+		    <div id="text-2" class="sidebar-wrap clearfix widget_text">			<div class="textwidget"><p>Suivez nous sur les réseaux sociaux</p>
+		<p><span style="color: #ffffff;">. _____  .</span>
+		<a href="https://www.facebook.com/ycvalandre"><img src="{{ asset('bundles/dcplatform/images/FB.png') }}" alt="Facebook" width="42" height="42" style="border: 0px;" />          </a>
+		<a href="https://twitter.com/ycvalandre"> <img src="{{ asset('bundles/dcplatform/images/Tw.png') }}" alt="Twitter" width="42" height="42" style="border: 0px;" /></a></p>
+		    </div>
+			  </div><div id="nav_menu-2" class="sidebar-wrap clearfix widget_nav_menu"><h3>Challenge été 2014</h3><div class="menu-regate-container"><ul id="menu-regate" class="menu"><li id="menu-item-73" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-73"><a href="http://ycva.fr/?page_id=37">La baie en double</a></li>
+		<li id="menu-item-74" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-34 current_page_item menu-item-74"><a href="http://ycva.fr/?page_id=34">80 miles de Dahouët</a></li>
+		<li id="menu-item-134" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-134"><a href="http://ycva.fr/?page_id=31">Régate de Notre Dame de la garde</a></li>
+		</ul></div></div><div id="search-2" class="sidebar-wrap clearfix widget_search"><h3>Recherche </h3><form id="searchform" class="searchform" method="get" action="http://ycva.fr">
+		    <p class="clearfix default_searchform">
+		        <input type="text" name="s" onblur="if (this.value == '') {this.value = 'Rechercher';}" onfocus="if (this.value == 'Rechercher') {this.value = '';}" value="Rechercher" />
+		        <button type="submit"><span>Rechercher</span></button>
+		    </p>
+		    </form></div>    
+		        
+		    
+		</div><!-- #sidebar1 -->
+{% endblock %}
+
+	    
+	</div><!-- #content -->
+{% endblock %}

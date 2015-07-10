@@ -1,0 +1,27 @@
+# pathprefix /
+
+dc_platform_dahouet_root:
+    path:      /
+    defaults:  { _controller: DCPlatformBundle:Dahouet:index}
+
+dc_platform_dahouet_acceuil:
+    path:      /acceuil
+    defaults:  { _controller: DCPlatformBundle:Dahouet:index}
+
+dc_platform_dahouet_regates_view:
+    path:      /regates/{id}
+    defaults:  { _controller: DCPlatformBundle:Dahouet:regatesview }
+    requirements:
+        id: \d*
+
+dc_platform_dahouet_regates_index:
+    path:      /regates
+    defaults:  { _controller: DCPlatformBundle:Dahouet:regatesindex }
+
+dc_platform_dahouet_regates_inscription:
+    path:      /regates/inscription
+    defaults:  { _controller: DCPlatformBundle:Dahouet:regatesinscription }
+
+dc_platform_dahouet_regates_inscription_voilier:
+    path:      /regates/inscription/voilier
+    defaults:  { _controller: DCPlatformBundle:Dahouet:regatesinscriptionvoilier }

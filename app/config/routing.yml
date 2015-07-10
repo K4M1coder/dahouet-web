@@ -1,0 +1,19 @@
+# app/config/routing.yml
+
+dc_platform_test:
+    resource: "@DCPlatformBundle/Resources/config/routing.yml"
+    prefix:   /test
+
+dc_platform_appli:
+    resource: "@DCPlatformBundle/Resources/config/dahouet.routing.yml"
+    prefix:   /
+
+login:
+    pattern:   /login
+    defaults:  { _controller: DCUserBundle:Security:login }
+
+login_check:
+    pattern:   /login_check
+
+logout:
+    pattern:   /logout

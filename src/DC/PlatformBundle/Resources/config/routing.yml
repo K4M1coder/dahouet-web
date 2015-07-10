@@ -1,0 +1,29 @@
+
+
+dc_platform_home:
+    path:      /{page}
+    defaults: { _controller: DCPlatformBundle:Advert:index, page: 1 }
+    requirements:
+        page: \d*
+
+dc_platform_view:
+    path:      /advert/{id}
+    defaults: { _controller: DCPlatformBundle:Advert:view }
+    requirements:
+        id: \d+
+
+dc_platform_add:
+    path:      /add
+    defaults: { _controller: DCPlatformBundle:Advert:add }
+
+dc_platform_edit:
+    path:      /edit/{id}
+    defaults: { _controller: DCPlatformBundle:Advert:edit }
+    requirements:
+        id: \d+
+
+dc_platform_delete:
+    path:      /delete/{id}
+    defaults: { _controller: DCPlatformBundle:Advert:delete }
+    requirements:
+        id: \d+
